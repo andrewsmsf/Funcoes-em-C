@@ -20,7 +20,7 @@ float valorpagar = 0;
 int main(){
     
     int vlPrestacao=1, nuatraso = 0, total = 0;
-    float multa, juro, valorpagar=0;
+    float multa, juro;
     while(vlPrestacao != 0){
         
         system("cls");
