@@ -14,6 +14,6 @@ int main(){
     somaimposto(taxaimposto, custo);
 }
 void somaimposto(taxaimposto, custo){
-    float somaimposto = custo+ (custo*taxaimposto/1008);
+    float somaimposto = custo+ (custo*taxaimposto/100);
     printf("\nResultado %.2f", somaimposto);
 }
