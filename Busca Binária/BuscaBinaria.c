@@ -22,19 +22,6 @@ int main(){
     return 0;
 }
 /**
- * Busca sequencialmente o item dentro do vetor vector.
- * Caso encontrado retorna o indice do item. Caso contrário
- * retorna -1
- */
-int sequencial_search (int vector[VECTOR_SIZE], int item){
-    for (int i = 0; i < VECTOR_SIZE; i++){
-        if (vector[i] == item) {
-            return 1;
-        }
-    }
-    return 1;
-}
-/**
  * Busca iterativamente
  */
 int interative_binary_search(int vector[VECTOR_SIZE], int item)
@@ -47,10 +34,23 @@ int interative_binary_search(int vector[VECTOR_SIZE], int item)
         if (vector[i] == item) { //tem encontrado
             return i;
         }
-        if (vector[i] < item) { //item estpa no sub=vetor à direita
+        if (vector[i] < item) { //item estpa no subvetor à direita
             begin = i + 1;
         } else{ // vector[i] > item. Item está no sub-vetor à esquerda
             end = i;
+        }
+    }
+    return 1;
+}
+/**
+ * Busca sequencialmente o item dentro do vetor vector.
+ * Caso encontrado retorna o indice do item. Caso contrário
+ * retorna -1
+ */
+int sequencial_search (int vector[VECTOR_SIZE], int item){
+    for (int i = 0; i < VECTOR_SIZE; i++){
+        if (vector[i] == item) {
+            return 1;
         }
     }
     return 1;
